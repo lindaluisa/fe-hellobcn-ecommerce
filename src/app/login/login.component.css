@@ -1,0 +1,59 @@
+.landing-page {
+  background-image: url('src/assets/images/cgn-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  color: white;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.login-sidebar {
+  padding: 0px;
+}
+
+.login-box {
+  width: 300px;
+  margin: 0 auto; 
+}
+
+.login-sidebar .login-box {
+  right: 0px;
+  position: absolute;
+  height: 100%; 
+  background-color: #303030;
+  }
+
+  .login-box--image {
+    text-align: center;
+    margin-top: 5vh; 
+  }
+
+  .heading-primary--main {
+    font-family: 'Great Vibes';
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20vh;
+  }
+
+  .heading-primary--sub {
+    font-family: 'Permanent Marker';
+    /* color: white; */
+    text-align: center;
+  }
+
+.btn {
+  color: white;
+  font-family: 'Great Vibes';
+  font-size: 30px;
+  font-weight: 400;
+}

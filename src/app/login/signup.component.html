@@ -1,0 +1,65 @@
+<section>
+    <div class="landing-page">
+      <div class="login-sidebar">
+
+        <form [formGroup]="form" (ngSubmit)="signupUser()">
+          <div class="form">
+            <div class="example-container login-box">
+              <div class="login-box--image">
+                <h1 class="heading-primary">
+                  <span class="heading-primary--main">Bye Cologne,<br> hello Barcelona! </span>
+                </h1>
+                <br>
+                <img  style="width:15vh;"class="header__logo" alt="BCN Logo" src="../assets/images/logo-bcn-light.png">
+              </div>
+              <br>
+              <span class="heading-primary--sub">// Win-Win Super Sale </span>
+              <span class="heading-primary--sub">// Help me move to BCN </span>
+
+                <mat-form-field>
+                  <input formControlName="username" matInput required placeholder="Username">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <input formControlName="email" matInput required placeholder="Email">
+                </mat-form-field>
+                
+                <mat-form-field>
+                  <input formControlName="password" name="password" matInput required placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field>
+                  <input formControlName="password2" name="password2" matInput required placeholder="Confirm your password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
+
+                <div class="form-group" *ngIf="form.errors?.equalInputs && !form.pristine">
+                  <p>
+                    The passwords must be equal.
+                  </p>
+                </div>
+
+                <!-- The '?' has to be written after 'errors' in order to have this code work in browser without error message -->
+                <!-- pristine: true if NOT interacted -->
+                <!-- {{ form.errors | json}} -->
+
+                  <div>
+                  <input type="checkbox" formControlName="conditions" id="signup-checkbox" name="conditions"> 
+                  <label for="signup-checkbox" > I agree to all <a href="#">Terms</a></label>
+                  </div>
+
+                <button mat-button class="btn" type="submit">Sign up</button>
+                <br>
+                <br>
+                <p>Already have an account?<a routerLink="/login"> Log in</a></p>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+</section>
+
+
+<!-- required facilitates asterisk (HTML implementation) -->

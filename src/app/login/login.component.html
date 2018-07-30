@@ -1,0 +1,41 @@
+<section>
+  <div class="landing-page">
+    <div class="login-sidebar">
+      
+      <div class="example-container login-box">
+        
+        <div class="login-box--image">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Bye Cologne,<br> hello Barcelona! </span>
+          </h1>
+          <br>
+          <img  style="width:30vh;"class="header__logo" alt="BCN Logo" src="../assets/images/logo-bcn-light.png">
+        </div>
+        <br>
+        <span class="heading-primary--sub">// Win-Win Super Sale </span>
+        <span class="heading-primary--sub">// Help me move to BCN </span>
+
+        <form #f="ngForm" (ngSubmit)="login( f )">
+          <mat-form-field>
+            <input matInput ngModel name="email" placeholder="Email">
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput ngModel name="password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+
+          <div>
+            <input type="checkbox" [(ngModel)]="rememberme" name="rememberme" id="rememberme-checkbox"> 
+            <label for="rememberme-checkbox"> Remember me <a href="#">Terms</a></label>
+          </div>
+
+          <button mat-button class="btn">Log in</button>
+          <br>
+          <p>Don't have an account?</p><a routerLink="/signup" >Sign up</a>
+        </form>
+        </div>
+    </div>
+  </div>
+  
+  </section>
