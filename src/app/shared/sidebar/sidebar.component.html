@@ -23,12 +23,17 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Hello BCN, bye CGN</span>
+      <a mat-list-item href="#dashboard">Hello BCN, bye CGN</a>
       <span class="navbar-spacer"></span>
-      <a mat-list-item href="#dashboard">Home</a>
       <a mat-list-item href="#wardrobe">Wardrobe</a>
       <a mat-list-item href="#shopping-cart">Reservation</a>
-      <li role="separator" class="divider"></li>
+      
+      <h4 mat-list-item href="#user"> {{ user.username }} </h4>
+      <li>
+        <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+          <img style="height: 6vh; border-radius: 5vh;" [src]=" user.img | img" alt="user" /></a>
+      </li>
+
       <li><a (click)="_userService.logout()" class="pointer"><i class="fa fa-power-off"></i> Logout</a></li>
     </mat-toolbar>
     <ng-content></ng-content>

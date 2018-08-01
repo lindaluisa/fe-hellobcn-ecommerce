@@ -10,6 +10,10 @@ import { WardrobeComponent } from './wardrobe/wardrobe.component';
 import { DetailComponent } from './detail/detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+// Pipe Module
+import { PipesModule } from 'src/app/pipes/pipes.module';
+
+
 import { SliderComponent } from '../components/slider/slider.component';
 
 import { MatSliderModule } from '@angular/material';
@@ -33,7 +37,8 @@ import { MatSliderModule } from '@angular/material';
   imports: [
     SharedModule,
     PAGES_ROUTES,
-    MatSliderModule
+    MatSliderModule,
+    PipesModule
   ]
 })
 
