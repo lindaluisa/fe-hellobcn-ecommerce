@@ -5,7 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {
   SidebarService,
   SharedService,
-  UserService
+  UserService,
+  LoginGuardGuard
  } from './service.index';
 
 
@@ -17,7 +18,8 @@ import {
   providers: [
     SidebarService,
     SharedService,
-    UserService
+    UserService,
+    LoginGuardGuard
   ],
   declarations: []
 })

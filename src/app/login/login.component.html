@@ -17,7 +17,7 @@
 
         <form #f="ngForm" (ngSubmit)="login( f )">
           <mat-form-field>
-            <input matInput ngModel name="email" placeholder="Email">
+            <input matInput [ngModel]="email" name="email" placeholder="Email">
           </mat-form-field>
           
           <mat-form-field>

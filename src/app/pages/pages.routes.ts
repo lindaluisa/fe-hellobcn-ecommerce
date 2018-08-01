@@ -6,10 +6,13 @@ import { DashboardComponent } from 'src/app/pages/dashboard/dashboard.component'
 import { WardrobeComponent } from 'src/app/pages/wardrobe/wardrobe.component';
 import { DetailComponent } from 'src/app/pages/detail/detail.component';
 
+import { LoginGuardGuard } from '../services/guards/login-guard.guard';
+
 const pagesRoutes: Routes = [
   {
     path: '',
     component: PagesComponent,
+    canActivate: [ LoginGuardGuard ],
     children: [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'wardrobe', component: WardrobeComponent},

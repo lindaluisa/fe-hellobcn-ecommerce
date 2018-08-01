@@ -14,6 +14,8 @@ import { UserService } from '../services/service.index';
 
 export class LoginComponent implements OnInit {
   hide = true;
+
+  email: string;
   rememberme: Boolean = false;
 
   constructor(
@@ -23,7 +25,15 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+
+    this.email = localStorage.getItem('email') || '';
+    if ( this.email.length > 1 ) {
+      this.rememberme = true;
+    } else {
+      localStorage.removeItem('email');
+    }
   }
+
 
   login( form: NgForm ) {
 
