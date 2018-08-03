@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { UserService } from '../../services/service.index';
 import { User } from '../../models/user.model';
+import { MatMenuTrigger } from '@angular/material';
 
 
 @Component({
@@ -14,7 +16,9 @@ import { User } from '../../models/user.model';
 })
 export class SidebarComponent implements OnInit {
 
+
   user: User;
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -23,11 +27,11 @@ export class SidebarComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public _userService: UserService
+    public _userService: UserService,
+    public router: Router
   ) {}
 
   ngOnInit() {
     this.user = this._userService.user;
   }
-
 }

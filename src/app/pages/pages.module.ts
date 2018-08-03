@@ -9,6 +9,7 @@ import { PagesComponent } from './pages.component';
 import { WardrobeComponent } from './wardrobe/wardrobe.component';
 import { DetailComponent } from './detail/detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 
 // Pipe Module
 import { PipesModule } from 'src/app/pipes/pipes.module';
@@ -16,7 +17,11 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
 
 import { SliderComponent } from '../components/slider/slider.component';
 
-import { MatSliderModule } from '@angular/material';
+import {
+  MatSliderModule,
+  MatFormFieldModule,
+  MatInputModule
+} from '@angular/material';
 
 @NgModule ({
   declarations: [
@@ -24,7 +29,8 @@ import { MatSliderModule } from '@angular/material';
     DashboardComponent,
     DetailComponent,
     WardrobeComponent,
-    SliderComponent
+    SliderComponent,
+    ProfileComponent
   ],
   exports: [
     PagesComponent,
@@ -38,7 +44,9 @@ import { MatSliderModule } from '@angular/material';
     SharedModule,
     PAGES_ROUTES,
     MatSliderModule,
-    PipesModule
+    PipesModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 
+import { RouterModule } from '@angular/router';
+
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -40,7 +42,8 @@ import { PipesModule } from '../pipes/pipes.module';
     MatListModule,
     MatMenuModule,
     MatSliderModule,
-    PipesModule
+    PipesModule,
+    RouterModule
   ]
 })
 

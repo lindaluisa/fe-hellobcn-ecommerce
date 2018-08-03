@@ -15,7 +15,9 @@ import {
   MatInputModule,
   MatFormFieldModule,
   MatSliderModule,
-  MatCheckboxModule} from '@angular/material';
+  MatCheckboxModule,
+  MatSelectModule
+} from '@angular/material';
 
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
@@ -58,6 +60,7 @@ import { SignupComponent } from './login/signup.component';
     MatCheckboxModule,
     MatFormFieldModule,
     MatSliderModule,
+    MatSelectModule,
     ServiceModule
   ],
   providers: [],
