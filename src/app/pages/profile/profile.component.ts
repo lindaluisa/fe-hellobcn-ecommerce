@@ -24,11 +24,14 @@ export class ProfileComponent implements OnInit {
 
   save ( user: User) {
 
-    console.log( this.user.username );
     this.user.username = user.username;
     this.user.email = user.email;
 
-    console.log( user );
+
+    this._userService.updateUser( this.user )
+            .subscribe (resp => {
+              console.log(resp);
+            });
 
   }
 }

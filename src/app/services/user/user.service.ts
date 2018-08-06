@@ -90,4 +90,14 @@ export class UserService {
 
     this.router.navigate(['/login']);
   }
+
+  updateUser( user: User ) {
+
+  let url = SERVICE_URL + '/user/' + user._id;
+  url += '?token=' + this.token;
+
+  console.log( url );
+
+    return this.http.put (url, user);
+  }
 }
