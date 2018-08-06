@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
+import { FormsModule } from '@angular/forms';
+
 // Rutas
 import { PAGES_ROUTES } from './pages.routes';
 
@@ -46,7 +48,8 @@ import {
     MatSliderModule,
     PipesModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ]
 })
 

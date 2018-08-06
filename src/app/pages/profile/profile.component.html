@@ -1,29 +1,28 @@
-<div>
+<form #f="ngForm" (ngSubmit)="save( f.value )">
     <h3>User Profile</h3>
   <label for="exampleInputuname">User Name </label>
-  <p>
+  <div>
     <mat-form-field appearance="outline">
-      <input matInput placeholder="User Name">
+      <input [ngModel]="user.username" name="username" matInput placeholder="User Name">
     </mat-form-field>
-  </p>
+  </div>
   
   <label for="exampleInputuname">Email Address </label>
-  <p>
+  <div>
     <mat-form-field appearance="outline">
         <mat-label>Enter Email</mat-label>
-      <input matInput placeholder="Email Address">
+      <input [ngModel]="user.email" name="email" matInput placeholder="Email Address">
     </mat-form-field>
-  </p>
+  </div>
 
 
   <button type="submit" class="btn btn-dark waves-effect waves-light m-r-10">
       <i class="fa fa-save"></i>
       Save
   </button>
-</div>
+</form>
+
   <hr>
-
-
 
 <div>
   <h3>User Image</h3>

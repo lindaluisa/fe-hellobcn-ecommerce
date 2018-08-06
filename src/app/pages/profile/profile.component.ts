@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/service.index';
+import { User } from '../../models/user.model';
 
 
 @Component({
@@ -6,12 +8,31 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './profile.component.html',
   styles: []
 })
+
 export class ProfileComponent implements OnInit {
 
+  user: User;
 
-  constructor() { }
+  constructor(
+    public _userService: UserService
+  ) {
+    this.user = this._userService.user;
+  }
 
   ngOnInit() {
   }
 
+  save ( user: User) {
+
+    console.log( this.user.username );
+    this.user.username = user.username;
+    this.user.email = user.email;
+
+    console.log( user );
+
+  }
 }
+
+
+// this.user.username = user.username;
+// db username = updated username
